@@ -4,7 +4,7 @@ def connect():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="your_password",  # change this
+        password="root", 
         database="student_db"
     )
 
@@ -13,7 +13,7 @@ def add_student(roll_no, name, age, course, email):
     cursor = conn.cursor()
     query = "INSERT INTO students (roll_no, name, age, course, email) VALUES (%s, %s, %s, %s, %s)"
     values = (roll_no, name, age, course, email)
-    cursor.execute(query, values)
+    cursor.executemany(query, values)
     conn.commit()
     conn.close()
     print("Student added successfully.")
