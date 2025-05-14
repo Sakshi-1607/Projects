@@ -2,8 +2,8 @@ CREATE DATABASE StudentRecordsDB;
 USE StudentRecordsDB;
 CREATE TABLE Students(
 Student_id INT AUTO_INCREMENT PRIMARY KEY,
-first_name VARCHAR(50) NOT NULL,
-last_name varchar(50) NOT NULL,
+first_name VARCHAR(50),
+last_name varchar(50),
 age int not null,
 class_id int not null,
 total_score int not null
