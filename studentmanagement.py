@@ -7,7 +7,7 @@ def create_tables():
     
     # Students table
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS students (
+    CREATE TABLE students (
         student_id INTEGER PRIMARY KEY AUTOINCREMENT,
         first_name TEXT,
         last_name TEXT,
@@ -20,7 +20,7 @@ def create_tables():
     
     # Courses table
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS courses (
+    CREATE TABLE courses (
         course_id INTEGER PRIMARY KEY AUTOINCREMENT,
         course_name TEXT,
         course_description TEXT,
@@ -30,7 +30,7 @@ def create_tables():
     
     # Enrollments table
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS enrollments (
+    CREATE TABLE enrollments (
         enrollment_id INTEGER PRIMARY KEY AUTOINCREMENT,
         student_id INTEGER,
         course_id INTEGER,
